@@ -1,5 +1,9 @@
 
-
+/**
+ * Subtract 1 to limit from Counter
+ * @author kaizofaria
+ *
+ */
 
 public class SubtractTask implements Runnable{
 	private Counter counter;

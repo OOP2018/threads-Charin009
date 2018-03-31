@@ -1,15 +1,28 @@
-
-
-
+/**
+ * Run two threads together 
+ * One thread add 1 to LIMIT to Counter.
+ * other thread subtract 1 to LIMIT from Counter.
+ * @author Charin Tantrakul
+ *
+ */
 public class ThreadSum {
+	/**
+	 * Run the program.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// upper limit of numbers to add/subtract to Counter
-		final int LIMIT = 10000;
+		final int LIMIT = 10000000;
 		// The counter that accumulates a total.
-		Counter counter = new AtomicCounter();
+		Counter counter = new Counter();
 		runThreads(counter, LIMIT);
 	}
 
+	/**
+	 * Create and run two threads with AddTask ,and SubtractTask. 
+	 * @param counter that user want to use.
+	 * @param limit is limit of number that user want to add and subtract. 
+	 */
 	public static void runThreads(Counter counter, final int limit) {
 		// two tasks that add and subtract values using same Counter
 		AddTask addtask = new AddTask(counter, limit);

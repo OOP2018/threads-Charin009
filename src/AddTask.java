@@ -1,5 +1,9 @@
 
-
+/**
+ * Add 1 to limit to Counter.
+ * @author Charin Tantrakul
+ *
+ */
 
 public class AddTask implements Runnable {
 	private Counter counter;
@@ -10,6 +14,7 @@ public class AddTask implements Runnable {
 		this.limit = limit;
 	}
 
+	
 	public void run() {
 		for (int k = 1; k <= limit; k++) {
 			counter.add(k);

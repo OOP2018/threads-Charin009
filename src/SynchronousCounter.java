@@ -1,4 +1,8 @@
-
+/**
+ * Counter that use synchronized.
+ * @author Charin Tantrakul
+ *
+ */
 public class SynchronousCounter extends Counter {
 	
 	@Override

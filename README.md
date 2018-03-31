@@ -17,10 +17,10 @@ The threads use the counter to add and subtract values.
 
 | Counter class           | Limit              | Runtime (sec)   |
 |:------------------------|:-------------------|-----------------|
-| Unsynchronized counter  |                    |                 |
-| Using ReentrantLock     |                    |                 |
-| Synchronized method      |                    |                 |
-| AtomicLong for total    |                    |                 |
+| Unsynchronized counter  |           10,000,000         |         0.0228   sec     |
+| Using ReentrantLock     |            10,0000,000        |        1.029   sec         |
+| Synchronized method      |             10,000,000       |          0.6582  sec    |
+| AtomicLong for total    |                10,000,000    |           0.3368 sec      |
 
 ## 1. Using unsynchronized counter object
 1.1 Yes ,the total should b zero
@@ -63,6 +63,10 @@ This behavior will affect Bank Applications when 2 user use same data from Bank 
 
 ## 6. Analysis of Results
 
+6.1 Rank from fastest one AtomicLong > Synchronized > ReentrantLock
+
+
+6.2 Synchronized because this one flexible , efficient, easy to use.
 
 
 ## 7. Using Many Threads (optional)

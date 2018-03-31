@@ -1,5 +1,9 @@
 import java.util.concurrent.atomic.AtomicLong;
-
+/**
+ * Counter that use AtomicLong instead normal long.
+ * @author Charin Tantrakul
+ *
+ */
 public class AtomicCounter extends Counter {
 	private AtomicLong total;
 
